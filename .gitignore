@@ -1,0 +1,73 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Node / Web Dependencies & Build Outputs
+node_modules/
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+.turbo/
+.vercel/
+
+# Logs & Diagnostics
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Testing & Coverage
+coverage/
+.nyc_output/
+*.lcov
+
+# Environment Variables & Secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+!.env.example
+
+# Editor & IDE Directories
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.iml
+*.iws
+*.sublime-project
+*.sublime-workspace
+
+# Python (if applicable)
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+
+# Temporary / Scratch Files
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*~
