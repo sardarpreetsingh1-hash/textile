@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Active Order Tracking - Textile Collative</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed-variant": "#474746",
+                      "primary": "#000000",
+                      "surface-container-high": "#eae7e7",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-fixed-variant": "#3e4c16",
+                      "on-primary-fixed": "#1c1b1b",
+                      "surface-dim": "#dcd9d9",
+                      "tertiary-container": "#161f00",
+                      "on-primary": "#ffffff",
+                      "on-surface": "#1b1c1c",
+                      "inverse-on-surface": "#f3f0f0",
+                      "background": "#fcf9f8",
+                      "inverse-primary": "#c8c6c5",
+                      "primary-container": "#1c1b1b",
+                      "on-tertiary-fixed": "#161f00",
+                      "secondary-fixed-dim": "#c8c6c2",
+                      "secondary-fixed": "#e4e2dd",
+                      "on-secondary-fixed-variant": "#474744",
+                      "tertiary-fixed": "#d9eaa3",
+                      "on-error": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "surface-container-highest": "#e4e2e1",
+                      "on-error-container": "#93000a",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed-dim": "#bdce89",
+                      "surface-variant": "#e4e2e1",
+                      "error": "#ba1a1a",
+                      "surface-bright": "#fcf9f8",
+                      "on-primary-container": "#858383",
+                      "secondary": "#5e5e5b",
+                      "outline-variant": "#c4c7c7",
+                      "on-secondary-fixed": "#1b1c19",
+                      "outline": "#747878",
+                      "tertiary": "#000000",
+                      "surface": "#fcf9f8",
+                      "on-background": "#1b1c1c",
+                      "on-surface-variant": "#444748",
+                      "surface-container": "#f0eded",
+                      "primary-fixed": "#e5e2e1",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-container": "#7b8a4d",
+                      "inverse-surface": "#303030",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "surface-container-low": "#f6f3f2",
+                      "on-secondary-container": "#63635f",
+                      "secondary-container": "#e1dfdb",
+                      "surface-tint": "#5f5e5e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-gap": "120px",
+                      "margin-mobile": "20px",
+                      "unit": "4px",
+                      "gutter": "24px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "data-num": [
+                              "JetBrains Mono"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-xl": [
+                              "Hanken Grotesk"
+                      ],
+                      "label-sm": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-lg-mobile": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "data-num": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-xl": [
+                              "80px",
+                              {
+                                      "lineHeight": "90px",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar (Tracking is active) -->
+<header class="bg-surface/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center px-margin-desktop h-20 w-full max-w-[1440px] mx-auto">
+<!-- Brand Logo -->
+<div class="flex items-center gap-4">
+<img alt="Texora Logo" class="h-8 w-8 object-cover rounded-DEFAULT" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8hFUpK7pwXlsJDOOWuvOsTci1ECsMge54EYowFws-x61aRzSBoJRQnPJ8lqlnOCVOH1JNLUew6-GEkviVW0iuXXuAfy_UE_aGtkrUZEaSGSzexnZqs4JpaW9zqaJI2pWevKYCAJXMBfA5bSOUvx0kKLFCjaPWt3mwv1VejD8lHjgBBEFfvnN7TVhkJ7Q5bgPEK4dsssOhJxN8ucA94VIePqNVxFBnlDTKkamVMDHo-xeogNrhZc4-"/>
+<span class="text-headline-md font-headline-md font-bold tracking-tighter text-primary">TEXTILE COLLATIVE</span>
+</div>
+<!-- Navigation Links (Web) -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-label-sm font-label-sm uppercase tracking-wider text-secondary hover:text-primary transition-colors hover:bg-secondary-container/10 px-3 py-2 rounded-DEFAULT" href="#">Catalogue</a>
+<a class="text-label-sm font-label-sm uppercase tracking-wider text-secondary hover:text-primary transition-colors hover:bg-secondary-container/10 px-3 py-2 rounded-DEFAULT" href="#">Capabilities</a>
+<a class="text-label-sm font-label-sm uppercase tracking-wider text-primary border-b-2 border-primary pb-1 px-3 py-2 rounded-DEFAULT" href="#">Tracking</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-6">
+<!-- Search (on_right) -->
+<button class="text-primary hover:bg-secondary-container/10 p-2 rounded-full transition-colors hidden md:block">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
+</button>
+<!-- Trailing Primary Action -->
+<button class="hidden md:flex items-center justify-center bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider px-6 py-3 hover:bg-on-surface-variant transition-colors">
+                    Schedule Meeting
+                </button>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-28 px-margin-mobile md:px-margin-desktop max-w-[1440px] w-full mx-auto pb-section-gap">
+<!-- Header Section -->
+<div class="mb-12 border-b border-outline-variant pb-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-tertiary-container bg-tertiary-fixed px-2 py-1 mb-4 inline-block">Active Tracking</span>
+<h1 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg-mobile md:font-headline-lg text-primary mb-2">Order #TX-902-84A</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl">High-tensile composite weave structure for aerospace application. Expected delivery timeframe established.</p>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-label-sm font-label-sm text-secondary uppercase tracking-wider mb-1">Est. Arrival</span>
+<span class="text-headline-md font-headline-md text-primary">NOV 14, 2024</span>
+</div>
+</div>
+</div>
+<!-- Horizontal Timeline -->
+<div class="mb-section-gap relative">
+<h2 class="sr-only">Order Progress</h2>
+<div class="hidden md:flex items-center justify-between relative z-10 w-full px-4">
+<!-- Step 1: Confirmed -->
+<div class="flex flex-col items-center flex-1 relative group">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center z-20 mb-4 border-2 border-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-primary font-bold">Confirmed</span>
+<span class="text-data-num font-data-num text-secondary mt-1">Oct 28</span>
+<!-- Line connecting to next -->
+<div class="absolute top-6 left-1/2 w-full h-[2px] bg-primary -z-10"></div>
+</div>
+<!-- Step 2: Production -->
+<div class="flex flex-col items-center flex-1 relative group">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center z-20 mb-4 border-2 border-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+</div>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-primary font-bold">Production</span>
+<span class="text-data-num font-data-num text-secondary mt-1">Oct 30</span>
+<!-- Line connecting to next -->
+<div class="absolute top-6 left-1/2 w-full h-[2px] bg-primary -z-10"></div>
+</div>
+<!-- Step 3: Quality Check (Active) -->
+<div class="flex flex-col items-center flex-1 relative group">
+<div class="w-12 h-12 bg-background border-2 border-primary text-primary rounded-full flex items-center justify-center z-20 mb-4 relative">
+<div class="absolute inset-0 rounded-full border-2 border-primary animate-ping opacity-20"></div>
+<span class="material-symbols-outlined">fact_check</span>
+</div>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-primary font-bold">Quality Check</span>
+<span class="text-data-num font-data-num text-secondary mt-1">In Progress</span>
+<!-- Line connecting to next (Inactive) -->
+<div class="absolute top-6 left-1/2 w-full h-[2px] bg-outline-variant -z-10"></div>
+</div>
+<!-- Step 4: Packed -->
+<div class="flex flex-col items-center flex-1 relative group opacity-50">
+<div class="w-12 h-12 bg-surface-container border-2 border-outline-variant text-outline rounded-full flex items-center justify-center z-20 mb-4">
+<span class="material-symbols-outlined">inventory_2</span>
+</div>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-outline">Packed</span>
+<span class="text-data-num font-data-num text-outline mt-1">--</span>
+<!-- Line connecting to next (Inactive) -->
+<div class="absolute top-6 left-1/2 w-full h-[2px] bg-outline-variant -z-10"></div>
+</div>
+<!-- Step 5: Dispatched -->
+<div class="flex flex-col items-center flex-1 relative group opacity-50">
+<div class="w-12 h-12 bg-surface-container border-2 border-outline-variant text-outline rounded-full flex items-center justify-center z-20 mb-4">
+<span class="material-symbols-outlined">local_shipping</span>
+</div>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-outline">Dispatched</span>
+<span class="text-data-num font-data-num text-outline mt-1">--</span>
+<!-- Line connecting to next (Inactive) -->
+<div class="absolute top-6 left-1/2 w-full h-[2px] bg-outline-variant -z-10"></div>
+</div>
+<!-- Step 6: Delivered -->
+<div class="flex flex-col items-center flex-1 relative group opacity-50">
+<div class="w-12 h-12 bg-surface-container border-2 border-outline-variant text-outline rounded-full flex items-center justify-center z-20 mb-4">
+<span class="material-symbols-outlined">home_work</span>
+</div>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-outline">Delivered</span>
+<span class="text-data-num font-data-num text-outline mt-1">--</span>
+</div>
+</div>
+<!-- Mobile Timeline (Vertical) -->
+<div class="md:hidden flex flex-col space-y-8 relative pl-6 border-l-2 border-primary/20">
+<!-- Step 1 -->
+<div class="relative">
+<div class="absolute -left-[35px] top-0 w-6 h-6 bg-primary rounded-full flex items-center justify-center border-2 border-background">
+<span class="material-symbols-outlined text-[12px] text-on-primary">check</span>
+</div>
+<div class="flex justify-between items-start">
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-primary font-bold">Confirmed</span>
+<span class="text-data-num font-data-num text-secondary">Oct 28</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative">
+<div class="absolute -left-[35px] top-0 w-6 h-6 bg-primary rounded-full flex items-center justify-center border-2 border-background">
+<span class="material-symbols-outlined text-[12px] text-on-primary">check</span>
+</div>
+<div class="flex justify-between items-start">
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-primary font-bold">Production</span>
+<span class="text-data-num font-data-num text-secondary">Oct 30</span>
+</div>
+</div>
+<!-- Step 3 (Active) -->
+<div class="relative">
+<div class="absolute -left-[35px] top-0 w-6 h-6 bg-background rounded-full border-2 border-primary flex items-center justify-center">
+<div class="w-2 h-2 bg-primary rounded-full"></div>
+</div>
+<div class="flex justify-between items-start">
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-primary font-bold">Quality Check</span>
+<span class="text-data-num font-data-num text-secondary">In Progress</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative opacity-50">
+<div class="absolute -left-[35px] top-0 w-6 h-6 bg-surface-container rounded-full border-2 border-outline-variant flex items-center justify-center">
+</div>
+<div class="flex justify-between items-start">
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-outline">Packed</span>
+<span class="text-data-num font-data-num text-outline">--</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Detailed Info Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: Shipment & Map -->
+<div class="md:col-span-8 flex flex-col gap-gutter">
+<!-- Live Location Card -->
+<div class="border border-outline-variant rounded-DEFAULT overflow-hidden bg-surface-container-low flex flex-col">
+<div class="p-6 border-b border-outline-variant flex justify-between items-center bg-surface">
+<h3 class="text-headline-md font-headline-md text-primary">Live Routing</h3>
+<span class="text-label-sm font-label-sm bg-surface-container-high px-3 py-1 text-secondary uppercase">Facility: DE-FRA-01</span>
+</div>
+<div class="h-64 w-full bg-surface-dim relative group">
+<img class="w-full h-full object-cover grayscale opacity-80 group-hover:opacity-100 transition-opacity duration-500" data-alt="A detailed, high-contrast satellite view map focusing on Frankfurt, Germany, highlighting industrial and logistics hubs. The map uses a minimalist, light-mode color palette with charcoal grays for roads and sage green accents for key nodes, maintaining a highly technical, B2B aesthetic suitable for a global manufacturing tracking interface." data-location="Frankfurt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIXjRD2awvOFlrYn1zPjbHAgQC_SUFKUcW245UXv3cuM5gc2ZHUjIDNZVJX33LC4u-xYjxMEpbSrrO8UynLU7ikyrdlNTPx_OBs3qc2gmF2utQ-5Cltb4tcinGYkF9G-4ESQ5Fw58zYFfZY2_42ahlMVwLKI8lYXVDvzyvDfegwdFCSdOkmLvjVHL5XtRzeb28-rBtQIwAiIbfLeoeDPeilKo_0Fl3Ol2P9AWAxn2gvJOzGuy7Y-tb"/>
+<!-- Simulated Pulse Pin -->
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+<div class="absolute w-12 h-12 bg-primary rounded-full animate-ping opacity-30"></div>
+<div class="w-4 h-4 bg-primary border-2 border-background rounded-full relative z-10 shadow-lg"></div>
+</div>
+</div>
+</div>
+<!-- Carrier Details Bento -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="border border-outline-variant p-6 bg-surface flex flex-col">
+<span class="text-label-sm font-label-sm text-secondary uppercase tracking-wider mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">local_shipping</span> Freight Partner</span>
+<div class="text-body-lg font-body-lg text-primary font-bold">Atlas Heavy Logistics</div>
+<div class="mt-4 pt-4 border-t border-outline-variant flex justify-between">
+<span class="text-label-sm font-label-sm text-secondary">Waybill</span>
+<span class="text-data-num font-data-num text-primary">AWB-772-9901</span>
+</div>
+</div>
+<div class="border border-outline-variant p-6 bg-surface flex flex-col">
+<span class="text-label-sm font-label-sm text-secondary uppercase tracking-wider mb-2 flex items-center gap-2"><span class="material-symbols-outlined text-[16px]">route</span> Service Level</span>
+<div class="text-body-lg font-body-lg text-primary font-bold">Priority Air Freight</div>
+<div class="mt-4 pt-4 border-t border-outline-variant flex justify-between">
+<span class="text-label-sm font-label-sm text-secondary">Incoterms</span>
+<span class="text-data-num font-data-num text-primary">DDP (Delivered Duty Paid)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Technical Docs & Summary (Technical Sidebar) -->
+<div class="md:col-span-4 flex flex-col gap-8 md:pl-8 md:border-l border-outline-variant h-full">
+<!-- Order Summary -->
+<div>
+<h3 class="text-headline-md font-headline-md text-primary mb-6">Specification Summary</h3>
+<ul class="space-y-4">
+<li class="flex justify-between border-b border-surface-container-highest pb-2">
+<span class="text-label-sm font-label-sm text-secondary uppercase">SKU</span>
+<span class="text-data-num font-data-num text-primary">CF-990-HX</span>
+</li>
+<li class="flex justify-between border-b border-surface-container-highest pb-2">
+<span class="text-label-sm font-label-sm text-secondary uppercase">Volume</span>
+<span class="text-data-num font-data-num text-primary">12,500 Meters</span>
+</li>
+<li class="flex justify-between border-b border-surface-container-highest pb-2">
+<span class="text-label-sm font-label-sm text-secondary uppercase">Weight</span>
+<span class="text-data-num font-data-num text-primary">4,200 KG</span>
+</li>
+<li class="flex justify-between pb-2">
+<span class="text-label-sm font-label-sm text-secondary uppercase">Destination</span>
+<span class="text-data-num font-data-num text-primary text-right max-w-[150px]">Hamburg Assembly Plant A</span>
+</li>
+</ul>
+</div>
+<!-- Technical Documents -->
+<div>
+<h3 class="text-headline-md font-headline-md text-primary mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined">description</span> Documentation
+                    </h3>
+<div class="flex flex-col gap-3">
+<a class="group border border-outline-variant p-4 flex items-center justify-between hover:border-primary hover:bg-surface-container-low transition-colors" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors">receipt_long</span>
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-wider">Commercial Invoice</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-secondary group-hover:text-primary transition-colors">download</span>
+</a>
+<a class="group border border-outline-variant p-4 flex items-center justify-between hover:border-primary hover:bg-surface-container-low transition-colors" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors">inventory</span>
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-wider">Packing List</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-secondary group-hover:text-primary transition-colors">download</span>
+</a>
+<a class="group border border-outline-variant p-4 flex items-center justify-between hover:border-primary hover:bg-surface-container-low transition-colors" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors">verified</span>
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-wider">ISO 9001 Cert</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-secondary group-hover:text-primary transition-colors">download</span>
+</a>
+</div>
+</div>
+<!-- Need Help -->
+<div class="mt-auto pt-8 border-t border-outline-variant">
+<p class="text-label-sm font-label-sm text-secondary uppercase tracking-wider mb-4">Require Assistance?</p>
+<button class="w-full border border-primary text-primary font-label-sm text-label-sm uppercase tracking-wider px-6 py-3 hover:bg-primary hover:text-on-primary transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">support_agent</span> Contact Account Manager
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary font-label-sm text-label-sm w-full border-t border-on-primary-fixed-variant grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-gap max-w-[1440px] mx-auto">
+<!-- Copyright -->
+<div class="col-span-1 md:col-span-2">
+<div class="text-headline-md font-headline-md text-on-primary mb-4 font-bold tracking-tighter">TEXTILE COLLATIVE</div>
+<p class="text-primary-fixed-dim opacity-80">© 2024 TEXTILE COLLATIVE. INDUSTRIAL GRADE PRECISION.</p>
+</div>
+<!-- Links -->
+<div class="col-span-1 md:col-span-2 flex flex-wrap gap-x-8 gap-y-4 md:justify-end">
+<a class="text-primary-fixed-dim hover:text-on-primary transition-colors hover:underline decoration-1 opacity-80 hover:opacity-100 uppercase tracking-wider" href="#">Terms of Supply</a>
+<a class="text-primary-fixed-dim hover:text-on-primary transition-colors hover:underline decoration-1 opacity-80 hover:opacity-100 uppercase tracking-wider" href="#">Compliance</a>
+<a class="text-primary-fixed-dim hover:text-on-primary transition-colors hover:underline decoration-1 opacity-80 hover:opacity-100 uppercase tracking-wider" href="#">Global Logistics</a>
+<a class="text-primary-fixed-dim hover:text-on-primary transition-colors hover:underline decoration-1 opacity-80 hover:opacity-100 uppercase tracking-wider" href="#">Technical Support</a>
+<a class="text-primary-fixed-dim hover:text-on-primary transition-colors hover:underline decoration-1 opacity-80 hover:opacity-100 uppercase tracking-wider" href="#">Privacy Policy</a>
+</div>
+</footer>
+</body></html>

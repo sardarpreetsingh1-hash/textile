@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Schedule Meeting - TEX-PRO INDUSTRIAL</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#3e4c16",
+                        "tertiary-container": "#161f00",
+                        "primary": "#000000",
+                        "on-tertiary-fixed": "#161f00",
+                        "secondary-fixed": "#e4e2dd",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#303030",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#e5e2e1",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "on-surface-variant": "#444748",
+                        "inverse-on-surface": "#f3f0f0",
+                        "on-secondary-fixed-variant": "#474744",
+                        "tertiary-fixed-dim": "#bdce89",
+                        "secondary-container": "#e1dfdb",
+                        "background": "#fcf9f8",
+                        "surface-container-high": "#eae7e7",
+                        "surface-container": "#f0eded",
+                        "outline-variant": "#c4c7c7",
+                        "on-surface": "#1b1c1c",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#858383",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e4e2e1",
+                        "on-primary-fixed-variant": "#474746",
+                        "tertiary-fixed": "#d9eaa3",
+                        "surface-tint": "#5f5e5e",
+                        "on-secondary-fixed": "#1b1c19",
+                        "surface-container-highest": "#e4e2e1",
+                        "surface-dim": "#dcd9d9",
+                        "surface": "#fcf9f8",
+                        "on-secondary-container": "#63635f",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#c8c6c5",
+                        "on-tertiary-container": "#7b8a4d",
+                        "tertiary": "#000000",
+                        "surface-bright": "#fcf9f8",
+                        "error-container": "#ffdad6",
+                        "secondary": "#5e5e5b",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "primary-container": "#1c1b1b",
+                        "on-background": "#1b1c1c",
+                        "outline": "#747878",
+                        "secondary-fixed-dim": "#c8c6c2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "section-gap": "120px",
+                        "unit": "4px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "body-md": [
+                            "Inter"
+                        ],
+                        "headline-lg": [
+                            "Hanken Grotesk"
+                        ],
+                        "data-num": [
+                            "JetBrains Mono"
+                        ],
+                        "headline-md": [
+                            "Hanken Grotesk"
+                        ],
+                        "label-sm": [
+                            "JetBrains Mono"
+                        ],
+                        "headline-lg-mobile": [
+                            "Hanken Grotesk"
+                        ],
+                        "display-xl": [
+                            "Hanken Grotesk"
+                        ],
+                        "body-lg": [
+                            "Inter"
+                        ]
+                    },
+                    "fontSize": {
+                        "body-md": [
+                            "16px",
+                            {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "headline-lg": [
+                            "48px",
+                            {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "data-num": [
+                            "14px",
+                            {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "headline-md": [
+                            "24px",
+                            {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "label-sm": [
+                            "12px",
+                            {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "500"
+                            }
+                        ],
+                        "headline-lg-mobile": [
+                            "32px",
+                            {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "display-xl": [
+                            "80px",
+                            {
+                                "lineHeight": "90px",
+                                "letterSpacing": "-0.04em",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "body-lg": [
+                            "18px",
+                            {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                            }
+                        ]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #fcf9f8; /* background */
+            color: #1b1c1c; /* on-background */
+        }
+        
+        /* Custom Select Styling */
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1em;
+        }
+
+        /* Calendar Grid Overrides for Minimalist Look */
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 1px;
+            background-color: #e4e2e1; /* surface-variant for border effect */
+            border: 1px solid #1a1a1a;
+        }
+        .calendar-cell {
+            background-color: #fcf9f8;
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .calendar-cell:hover:not(.empty):not(.disabled) {
+            background-color: #f0eded; /* surface-container */
+        }
+        .calendar-cell.active {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-weight: 600;
+        }
+        .calendar-cell.disabled {
+            color: #c4c7c7; /* outline-variant */
+            cursor: not-allowed;
+            background-color: #f6f3f2; /* surface-container-low */
+        }
+        .calendar-header {
+            background-color: #fcf9f8;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            text-transform: uppercase;
+            padding: 12px 0;
+            text-align: center;
+            border-bottom: 1px solid #1a1a1a;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-body-md antialiased pt-[72px]">
+<!-- TopNavBar -->
+<nav class="bg-surface fixed top-0 w-full z-50 border-b border-on-surface">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-[1440px] mx-auto">
+<a class="font-headline-md text-headline-md font-bold tracking-tighter text-primary flex items-center gap-2 hover:opacity-80 transition-opacity" href="#">
+<!-- Texora Logo SVG from provided image -->
+<svg fill="none" height="32" viewbox="0 0 100 100" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M49.9998 10.4166L10.4165 49.9999L49.9998 89.5833L89.5832 49.9999L49.9998 10.4166Z" stroke="#1A1A1A" stroke-linejoin="round" stroke-width="8"></path>
+<path d="M49.9998 25L25 49.9999L49.9998 74.9999L74.9998 49.9999L49.9998 25Z" stroke="#1A1A1A" stroke-linejoin="round" stroke-width="8"></path>
+<path d="M49.9998 39.5834L39.5832 49.9999L49.9998 60.4166L60.4165 49.9999L49.9998 39.5834Z" stroke="#1A1A1A" stroke-linejoin="round" stroke-width="8"></path>
+<path d="M25 25L75 75" stroke="#1A1A1A" stroke-linecap="round" stroke-width="8"></path>
+<path d="M75 25L25 75" stroke="#1A1A1A" stroke-linecap="round" stroke-width="8"></path>
+</svg>
+                TEX-PRO INDUSTRIAL
+            </a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-sm text-label-sm text-secondary hover:bg-surface-container-low transition-colors duration-200 py-2 px-3" href="#">Catalogue</a>
+<a class="font-label-sm text-label-sm text-secondary hover:bg-surface-container-low transition-colors duration-200 py-2 px-3" href="#">Capabilities</a>
+<a class="font-label-sm text-label-sm text-secondary hover:bg-surface-container-low transition-colors duration-200 py-2 px-3" href="#">Tracking</a>
+</div>
+<div class="flex items-center gap-4">
+<button aria-label="Search" class="hidden md:flex items-center justify-center w-10 h-10 border border-outline hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-on-surface">search</span>
+</button>
+<a class="font-label-sm text-label-sm bg-primary text-on-primary px-6 py-3 hover:opacity-90 transition-opacity border border-primary uppercase tracking-widest hidden md:inline-block active:scale-95" href="#">Schedule Meeting</a>
+<button class="md:hidden flex items-center justify-center w-10 h-10 border border-outline text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col md:flex-row gap-gutter md:gap-[64px]">
+<!-- Left Section: Header & Form -->
+<section class="w-full md:w-1/2 flex flex-col gap-12">
+<header class="flex flex-col gap-4">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Schedule a Business Consultation</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">Connect with our textile experts to discuss your manufacturing requirements, technical specifications, and production timelines.</p>
+</header>
+<form class="flex flex-col gap-8 flex-grow">
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface uppercase" for="meeting-type">Meeting Type</label>
+<div class="relative">
+<select class="w-full bg-surface border-0 border-b border-outline rounded-none px-0 py-3 font-body-md text-on-surface focus:ring-0 focus:border-tertiary-container transition-colors" id="meeting-type" name="meeting-type">
+<option disabled="" selected="" value="">Select an inquiry type...</option>
+<option value="fabric">Fabric Consultation &amp; Sourcing</option>
+<option value="bulk">Bulk Order Inquiry</option>
+<option value="tour">Factory Virtual Tour</option>
+<option value="custom">Custom Technical Specifications</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface uppercase">Preferred Duration</label>
+<div class="flex gap-4">
+<label class="flex-1 flex items-center justify-center p-4 border border-outline cursor-pointer hover:bg-surface-container-low transition-colors duration-200 has-[:checked]:bg-primary has-[:checked]:text-on-primary has-[:checked]:border-primary group">
+<input checked="" class="sr-only" name="duration" type="radio" value="30"/>
+<span class="font-data-num text-data-num">30 MIN</span>
+</label>
+<label class="flex-1 flex items-center justify-center p-4 border border-outline cursor-pointer hover:bg-surface-container-low transition-colors duration-200 has-[:checked]:bg-primary has-[:checked]:text-on-primary has-[:checked]:border-primary group">
+<input class="sr-only" name="duration" type="radio" value="60"/>
+<span class="font-data-num text-data-num">60 MIN</span>
+</label>
+</div>
+</div>
+<div class="flex flex-col gap-2 flex-grow">
+<label class="font-label-sm text-label-sm text-on-surface uppercase" for="requirements">Additional Requirements (Optional)</label>
+<textarea class="w-full bg-surface border-0 border-b border-outline rounded-none px-0 py-3 font-body-md text-on-surface focus:ring-0 focus:border-tertiary-container transition-colors resize-none placeholder-outline-variant" id="requirements" name="requirements" placeholder="E.g., specific SKU references, required certs, or NDA requests." rows="4"></textarea>
+</div>
+</form>
+</section>
+<!-- Right Section: Calendar & Time Selection -->
+<section class="w-full md:w-1/2 flex flex-col gap-8 bg-surface-container-lowest border border-outline-variant p-6 md:p-8">
+<div class="flex justify-between items-center mb-4">
+<h2 class="font-headline-md text-headline-md text-on-surface">October 2024</h2>
+<div class="flex gap-2">
+<button aria-label="Previous Month" class="w-10 h-10 border border-outline flex items-center justify-center hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button aria-label="Next Month" class="w-10 h-10 border border-outline flex items-center justify-center hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="calendar-wrapper w-full">
+<div class="calendar-grid">
+<!-- Headers -->
+<div class="calendar-header">Sun</div>
+<div class="calendar-header">Mon</div>
+<div class="calendar-header">Tue</div>
+<div class="calendar-header">Wed</div>
+<div class="calendar-header">Thu</div>
+<div class="calendar-header">Fri</div>
+<div class="calendar-header">Sat</div>
+<!-- Empty slots for offset -->
+<div class="calendar-cell empty"></div>
+<div class="calendar-cell empty"></div>
+<!-- Days -->
+<div class="calendar-cell disabled font-data-num text-data-num">1</div>
+<div class="calendar-cell disabled font-data-num text-data-num">2</div>
+<div class="calendar-cell disabled font-data-num text-data-num">3</div>
+<div class="calendar-cell disabled font-data-num text-data-num">4</div>
+<div class="calendar-cell disabled font-data-num text-data-num">5</div>
+<div class="calendar-cell disabled font-data-num text-data-num">6</div>
+<div class="calendar-cell disabled font-data-num text-data-num">7</div>
+<div class="calendar-cell font-data-num text-data-num">8</div>
+<div class="calendar-cell font-data-num text-data-num">9</div>
+<div class="calendar-cell font-data-num text-data-num">10</div>
+<div class="calendar-cell font-data-num text-data-num">11</div>
+<div class="calendar-cell disabled font-data-num text-data-num">12</div>
+<div class="calendar-cell disabled font-data-num text-data-num">13</div>
+<div class="calendar-cell active font-data-num text-data-num">14</div>
+<div class="calendar-cell font-data-num text-data-num">15</div>
+<div class="calendar-cell font-data-num text-data-num">16</div>
+<div class="calendar-cell font-data-num text-data-num">17</div>
+<div class="calendar-cell font-data-num text-data-num">18</div>
+<div class="calendar-cell disabled font-data-num text-data-num">19</div>
+<div class="calendar-cell disabled font-data-num text-data-num">20</div>
+<div class="calendar-cell font-data-num text-data-num">21</div>
+<div class="calendar-cell font-data-num text-data-num">22</div>
+<div class="calendar-cell font-data-num text-data-num">23</div>
+<div class="calendar-cell font-data-num text-data-num">24</div>
+<div class="calendar-cell font-data-num text-data-num">25</div>
+<div class="calendar-cell disabled font-data-num text-data-num">26</div>
+<div class="calendar-cell disabled font-data-num text-data-num">27</div>
+<div class="calendar-cell font-data-num text-data-num">28</div>
+<div class="calendar-cell font-data-num text-data-num">29</div>
+<div class="calendar-cell font-data-num text-data-num">30</div>
+<div class="calendar-cell font-data-num text-data-num">31</div>
+</div>
+</div>
+<!-- Time Slots -->
+<div class="flex flex-col gap-4 mt-4 border-t border-outline-variant pt-6">
+<h3 class="font-label-sm text-label-sm text-on-surface uppercase flex items-center justify-between">
+                    Available Times for Oct 14
+                    <span class="text-on-surface-variant normal-case">GMT-4 (Eastern Time)</span>
+</h3>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<button class="py-3 px-4 border border-outline font-data-num text-data-num text-center hover:bg-surface-container-low transition-colors">09:00 AM</button>
+<button class="py-3 px-4 border border-outline font-data-num text-data-num text-center hover:bg-surface-container-low transition-colors">09:30 AM</button>
+<button class="py-3 px-4 border border-outline font-data-num text-data-num text-center hover:bg-surface-container-low transition-colors">10:00 AM</button>
+<button class="py-3 px-4 bg-primary border-primary text-on-primary font-data-num text-data-num text-center shadow-[inset_0_0_0_1px_#1A1A1A]">11:30 AM</button>
+<button class="py-3 px-4 border border-outline font-data-num text-data-num text-center hover:bg-surface-container-low transition-colors opacity-50 cursor-not-allowed">01:00 PM</button>
+<button class="py-3 px-4 border border-outline font-data-num text-data-num text-center hover:bg-surface-container-low transition-colors">02:30 PM</button>
+</div>
+</div>
+<!-- Action Area -->
+<div class="mt-auto pt-8 flex justify-end">
+<button class="w-full md:w-auto font-label-sm text-label-sm bg-primary text-on-primary px-8 py-4 hover:opacity-90 transition-opacity uppercase tracking-widest active:scale-[0.98]" type="submit">Confirm Booking</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary w-full border-t border-on-surface mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-12 md:py-section-gap max-w-[1440px] mx-auto gap-8">
+<div class="flex flex-col gap-4 items-center md:items-start">
+<div class="font-headline-md text-headline-md text-on-primary font-bold flex items-center gap-2">
+<svg class="opacity-80" fill="none" height="24" viewbox="0 0 100 100" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M49.9998 10.4166L10.4165 49.9999L49.9998 89.5833L89.5832 49.9999L49.9998 10.4166Z" stroke="#FFFFFF" stroke-linejoin="round" stroke-width="8"></path>
+<path d="M49.9998 25L25 49.9999L49.9998 74.9999L74.9998 49.9999L49.9998 25Z" stroke="#FFFFFF" stroke-linejoin="round" stroke-width="8"></path>
+<path d="M49.9998 39.5834L39.5832 49.9999L49.9998 60.4166L60.4165 49.9999L49.9998 39.5834Z" stroke="#FFFFFF" stroke-linejoin="round" stroke-width="8"></path>
+<path d="M25 25L75 75" stroke="#FFFFFF" stroke-linecap="round" stroke-width="8"></path>
+<path d="M75 25L25 75" stroke="#FFFFFF" stroke-linecap="round" stroke-width="8"></path>
+</svg>
+                    TEX-PRO INDUSTRIAL
+                </div>
+<p class="font-label-sm text-label-sm text-surface-variant opacity-70">© 2024 TEX-PRO INDUSTRIAL MANUFACTURING. ALL RIGHTS RESERVED.</p>
+</div>
+<nav class="flex flex-wrap justify-center md:justify-end gap-x-8 gap-y-4">
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Compliance</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Sustainability Report</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-tertiary-fixed-dim transition-colors" href="#">Contact Sales</a>
+</nav>
+</div>
+</footer>
+</body></html>

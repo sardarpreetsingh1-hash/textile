@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TEXTILE COLLATIVE - Capabilities</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Hanken+Grotesk:wght@600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#474744",
+                        "outline": "#747878",
+                        "surface-container": "#f0eded",
+                        "surface-container-low": "#f6f3f2",
+                        "tertiary-fixed-dim": "#bdce89",
+                        "primary": "#000000",
+                        "secondary-fixed": "#e4e2dd",
+                        "on-tertiary-fixed": "#161f00",
+                        "primary-container": "#1c1b1b",
+                        "inverse-surface": "#303030",
+                        "on-secondary-container": "#63635f",
+                        "surface-variant": "#e4e2e1",
+                        "outline-variant": "#c4c7c7",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#1b1c19",
+                        "inverse-on-surface": "#f3f0f0",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#fcf9f8",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#3e4c16",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#858383",
+                        "primary-fixed": "#e5e2e1",
+                        "surface-container-highest": "#e4e2e1",
+                        "on-tertiary-container": "#7b8a4d",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "secondary": "#5e5e5b",
+                        "tertiary-fixed": "#d9eaa3",
+                        "surface-tint": "#5f5e5e",
+                        "on-surface": "#1b1c1c",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#c8c6c2",
+                        "background": "#fcf9f8",
+                        "surface-container-high": "#eae7e7",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#e1dfdb",
+                        "tertiary": "#000000",
+                        "inverse-primary": "#c8c6c5",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#161f00",
+                        "error": "#ba1a1a",
+                        "on-background": "#1b1c1c",
+                        "surface": "#fcf9f8",
+                        "on-primary-fixed-variant": "#474746",
+                        "on-surface-variant": "#444748",
+                        "surface-dim": "#dcd9d9",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "margin-desktop": "64px",
+                        "section-gap": "120px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "data-num": ["JetBrains Mono"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "label-sm": ["JetBrains Mono"],
+                        "body-md": ["Inter"],
+                        "display-xl": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "data-num": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-xl": ["80px", { "lineHeight": "90px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for horizontal scrolling sections */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 dark:bg-primary/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant dark:border-on-primary-fixed-variant transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 w-full max-w-[1440px] mx-auto">
+<div class="flex items-center gap-gutter">
+<a class="text-headline-md font-headline-md font-bold tracking-tighter text-primary dark:text-on-primary" href="#">TEXTILE COLLATIVE</a>
+</div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="text-label-sm font-label-sm uppercase tracking-wider text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors py-2 px-3 hover:bg-secondary-container/10 dark:hover:bg-primary-container/50 rounded-DEFAULT" href="#">Catalogue</a>
+<a class="text-label-sm font-label-sm uppercase tracking-wider text-primary dark:text-on-primary border-b-2 border-primary dark:border-on-primary pb-1 py-2 px-3 hover:bg-secondary-container/10 dark:hover:bg-primary-container/50 rounded-DEFAULT" href="#">Capabilities</a>
+<a class="text-label-sm font-label-sm uppercase tracking-wider text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-on-primary transition-colors py-2 px-3 hover:bg-secondary-container/10 dark:hover:bg-primary-container/50 rounded-DEFAULT" href="#">Tracking</a>
+</div>
+<div class="flex items-center gap-gutter">
+<button class="hidden md:flex items-center justify-center bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider px-6 py-3 rounded-none hover:bg-on-primary-fixed-variant transition-colors">
+                    Schedule Meeting
+                </button>
+<button class="md:hidden text-primary dark:text-on-primary p-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-section-gap grid grid-cols-1 md:grid-cols-12 gap-gutter items-end min-h-[819px]">
+<div class="md:col-span-8 z-10">
+<h1 class="text-display-xl font-display-xl text-primary mb-6">Manufacturing<br/>Capabilities</h1>
+<p class="text-body-lg font-body-lg text-secondary max-w-2xl">End-to-end industrial textile production. Scalable precision from raw fiber selection through to global logistics, engineered for B2B enterprise.</p>
+</div>
+<div class="md:col-span-12 mt-12 relative w-full aspect-[21/9] bg-surface-container border border-outline-variant overflow-hidden">
+<img class="w-full h-full object-cover filter grayscale opacity-90 mix-blend-multiply" data-alt="A wide, sweeping landscape view of a modern, ultra-clean industrial textile factory floor. Massive high-tech Jacquard looms operate in perfect alignment. The lighting is bright, natural, and stark, creating a high-key off-white and charcoal minimalist aesthetic. A sense of scale and precision manufacturing is paramount. No people are visible, focusing entirely on the machinery and pristine environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2fNdvHConrqCw6GFzBdQrlDft3N3KK_5o9azdCoYTVolG2RWQWoC3_RYWFoCSNOhs90W-5FTYG1Y8i3F8dwKqRcEl2jT6wCTeI-rAGf095TuQUyShHwlVQCrzIz4AMEPfeWoMIc71PLgCx53dSbaPqRrp-T95an6zhHrfmDNvMTc9FlDG0J1ARpdvq8__uGHU1KPS4W4hjOsuwm1aoqBkdXTtUXS6SkIhd50RjZgOxg-hO0UL6R-5"/>
+</div>
+</section>
+<!-- Process Journey (Horizontal Scroll) -->
+<section class="w-full max-w-[1440px] mx-auto py-section-gap overflow-hidden border-t border-outline-variant">
+<div class="px-margin-mobile md:px-margin-desktop mb-12 flex justify-between items-end">
+<h2 class="text-headline-lg font-headline-lg text-primary">The Process</h2>
+<div class="flex gap-4">
+<button aria-label="Previous step" class="w-12 h-12 border border-outline-variant flex items-center justify-center text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined" data-icon="arrow_left">arrow_left</span>
+</button>
+<button aria-label="Next step" class="w-12 h-12 border border-primary bg-primary text-on-primary flex items-center justify-center hover:bg-on-primary-fixed-variant transition-colors">
+<span class="material-symbols-outlined" data-icon="arrow_right">arrow_right</span>
+</button>
+</div>
+</div>
+<div class="flex gap-gutter px-margin-mobile md:px-margin-desktop overflow-x-auto hide-scrollbar pb-8 snap-x snap-mandatory">
+<!-- Step 1 -->
+<div class="min-w-[300px] md:min-w-[400px] flex-shrink-0 snap-start">
+<div class="text-data-num font-data-num text-outline mb-4 border-b border-outline-variant pb-4">01 // SOURCING</div>
+<div class="aspect-square bg-surface-container mb-6 border border-outline-variant">
+<img class="w-full h-full object-cover grayscale opacity-80" data-alt="Close-up macro photography of raw cotton fibers and linen threads arranged neatly on a stark off-white background. The lighting is clinical and sharp, highlighting the texture and purity of the materials. Minimalist industrial aesthetic with a focus on raw material quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPD3xHgGSDvnlgWwOfwdzxP_P12JQWDpZWnxjWxJ_GO1TqISJtTgziwRmENiKZRGekUpf1Z-9K1X2_V_4oxahQFlz_8TycuuUZAVmYO631VqzQ-p0OnoQSO_m6NB4dA98Ldeauz-pJ4eWT8F42oMlzshlYPsyaCKg-UGuVYk8cigflvZ3Wq2jmfQej8ftzEcAXFpiUqDBc3ushxA1ZxgoWysHAuej5-xelGVX7cCuZqpvUfOXmugUW"/>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-2">Raw Materials</h3>
+<p class="text-body-md font-body-md text-secondary">Global procurement of premium fibers, including certified organic cottons, European linens, and advanced recycled synthetics.</p>
+</div>
+<!-- Step 2 -->
+<div class="min-w-[300px] md:min-w-[400px] flex-shrink-0 snap-start">
+<div class="text-data-num font-data-num text-outline mb-4 border-b border-outline-variant pb-4">02 // PREPARATION</div>
+<div class="aspect-square bg-surface-container mb-6 border border-outline-variant">
+<img class="w-full h-full object-cover grayscale opacity-80" data-alt="Abstract architectural shot of industrial spinning frames winding thread onto massive cones. The image is strictly composed with strong vertical lines and geometric precision. High-contrast lighting in a clean, modern factory setting. Grayscale with deep charcoal shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfArp8wUE-7h3WpAB7cwrjVmbKaPzPFfN4aLD5_fxAcmnL0X1lkVqk9IqPfWYKXZbIVmHy6BGFpDq4fnN4xNWKaFhmrGiWNwTg5m8WOYxKK9zi2arEWYaXzMy74Ja9CETtHvKa0PnTHHKO2FbbliyDYzEZLtGlMBY1ptIajqbPVv3uBdgaXdS5uDdy7Dtkfp6VGod5Ca8OZRyGzZb3U6U8lj7xyv-6eGUg_HdySLwwOs_iFz7-Oqc4"/>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-2">Processing & Spinning</h3>
+<p class="text-body-md font-body-md text-secondary">High-tension yarn preparation ensuring consistent denier and tensile strength required for commercial applications.</p>
+</div>
+<!-- Step 3 -->
+<div class="min-w-[300px] md:min-w-[400px] flex-shrink-0 snap-start">
+<div class="text-data-num font-data-num text-primary font-bold mb-4 border-b border-primary pb-4">03 // CORE CAPABILITY</div>
+<div class="aspect-square bg-surface-container mb-6 border border-primary relative">
+<div class="absolute top-4 right-4 bg-tertiary-fixed-dim/20 text-on-tertiary-container text-label-sm font-label-sm px-3 py-1 border border-tertiary-fixed-dim backdrop-blur-sm">PROPRIETARY TECH</div>
+<img class="w-full h-full object-cover grayscale opacity-90" data-alt="Extreme macro shot of a complex weave pattern emerging from a state-of-the-art modern loom. The metal components of the loom are sleek and sharp. The fabric being woven is a deep, rich charcoal grey. The overall aesthetic is highly technical, precise, and industrial." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEO4swUhXBuHzTCqvgiRFc2-Zbwj_6aTMC3q853sYZGYTDEdYIji6-7j8RdnDEakaG2jIPftjNsUQCVoZSWIAZlc4Qx1VFvKHFywwPkBinYtVatvn8myMtZ-hBy2AvW9fls2bTFnEu_zx5_b6LHfQryn5FwLAFvI2ieDIIYhbwlT7rvbg9wg5CA5SDBsF7u9HoA83xQ-naKbZJRORk_aNJaz9e7uffRtsWEuq9OOCzcu_G6--Gk54C"/>
+</div>
+<h3 class="text-headline-md font-headline-md text-primary mb-2">Precision Weaving</h3>
+<p class="text-body-md font-body-md text-secondary">Automated high-speed looms capable of complex dobby and jacquard structures, maintaining absolute consistency over kilometer-long runs.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-surface-container-lowest text-on-primary dark:text-on-surface w-full border-t border-on-primary-fixed-variant opacity-80 hover:opacity-100 transition-opacity">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-gap w-full max-w-[1440px] mx-auto">
+<div class="col-span-1 md:col-span-2">
+<div class="text-headline-md font-headline-md text-on-primary dark:text-on-surface mb-4">TEXTILE COLLATIVE</div>
+<div class="text-label-sm font-label-sm text-primary-fixed-dim">© 2024 TEXTILE COLLATIVE. INDUSTRIAL GRADE PRECISION.</div>
+</div>
+<div class="col-span-1 flex flex-col gap-4">
+<a class="text-label-sm font-label-sm text-primary-fixed-dim hover:text-on-primary transition-colors hover:underline decoration-1" href="#">Terms of Supply</a>
+<a class="text-label-sm font-label-sm text-primary-fixed-dim hover:text-on-primary transition-colors hover:underline decoration-1" href="#">Compliance</a>
+<a class="text-label-sm font-label-sm text-primary-fixed-dim hover:text-on-primary transition-colors hover:underline decoration-1" href="#">Global Logistics</a>
+</div>
+<div class="col-span-1 flex flex-col gap-4">
+<a class="text-label-sm font-label-sm text-primary-fixed-dim hover:text-on-primary transition-colors hover:underline decoration-1" href="#">Technical Support</a>
+<a class="text-label-sm font-label-sm text-primary-fixed-dim hover:text-on-primary transition-colors hover:underline decoration-1" href="#">Privacy Policy</a>
+</div>
+</div>
+</footer>
+</body></html>

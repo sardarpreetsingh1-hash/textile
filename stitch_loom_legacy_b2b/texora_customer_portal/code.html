@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Texora B2B Customer Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#474746",
+                        "primary": "#000000",
+                        "surface-container-high": "#eae7e7",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#3e4c16",
+                        "on-primary-fixed": "#1c1b1b",
+                        "surface-dim": "#dcd9d9",
+                        "tertiary-container": "#161f00",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#1b1c1c",
+                        "inverse-on-surface": "#f3f0f0",
+                        "background": "#fcf9f8",
+                        "inverse-primary": "#c8c6c5",
+                        "primary-container": "#1c1b1b",
+                        "on-tertiary-fixed": "#161f00",
+                        "secondary-fixed-dim": "#c8c6c2",
+                        "secondary-fixed": "#e4e2dd",
+                        "on-secondary-fixed-variant": "#474744",
+                        "tertiary-fixed": "#d9eaa3",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e4e2e1",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#bdce89",
+                        "surface-variant": "#e4e2e1",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#fcf9f8",
+                        "on-primary-container": "#858383",
+                        "secondary": "#5e5e5b",
+                        "outline-variant": "#c4c7c7",
+                        "on-secondary-fixed": "#1b1c19",
+                        "outline": "#747878",
+                        "tertiary": "#000000",
+                        "surface": "#fcf9f8",
+                        "on-background": "#1b1c1c",
+                        "on-surface-variant": "#444748",
+                        "surface-container": "#f0eded",
+                        "primary-fixed": "#e5e2e1",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#7b8a4d",
+                        "inverse-surface": "#303030",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "surface-container-low": "#f6f3f2",
+                        "on-secondary-container": "#63635f",
+                        "secondary-container": "#e1dfdb",
+                        "surface-tint": "#5f5e5e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "120px",
+                        "margin-mobile": "20px",
+                        "unit": "4px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "data-num": ["JetBrains Mono"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "display-xl": ["Hanken Grotesk"],
+                        "label-sm": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "data-num": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-xl": ["80px", { "lineHeight": "90px", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body class="flex min-h-screen">
+<!-- SideNavBar -->
+<nav class="bg-surface-container-low dark:bg-primary-container h-screen w-64 fixed left-0 top-0 border-r border-outline-variant dark:border-on-primary-fixed-variant flex flex-col py-8 px-4 z-40 transition-transform duration-200 hidden md:flex">
+<div class="mb-8 px-4 flex flex-col items-start gap-4">
+<img alt="Texora Logo" class="h-12 w-auto object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8hFUpK7pwXlsJDOOWuvOsTci1ECsMge54EYowFws-x61aRzSBoJRQnPJ8lqlnOCVOH1JNLUew6-GEkviVW0iuXXuAfy_UE_aGtkrUZEaSGSzexnZqs4JpaW9zqaJI2pWevKYCAJXMBfA5bSOUvx0kKLFCjaPWt3mwv1VejD8lHjgBBEFfvnN7TVhkJ7Q5bgPEK4dsssOhJxN8ucA94VIePqNVxFBnlDTKkamVMDHo-xeogNrhZc4-"/>
+<div>
+<h1 class="text-headline-md font-headline-md text-primary dark:text-on-primary">Industrial Portal</h1>
+<p class="text-body-md font-body-md text-on-surface-variant">Admin Console</p>
+</div>
+</div>
+<ul class="flex-1 space-y-2">
+<li>
+<a class="flex items-center gap-3 px-4 py-3 bg-secondary-container dark:bg-secondary text-on-secondary-container font-bold border-r-4 border-primary rounded-l-sm transition-colors group text-body-md font-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                    Dashboard
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-on-primary-container hover:bg-surface-container-high dark:hover:bg-on-primary-fixed-variant transition-colors rounded-sm text-body-md font-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="package_2">package_2</span>
+                    Orders
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-on-primary-container hover:bg-surface-container-high dark:hover:bg-on-primary-fixed-variant transition-colors rounded-sm text-body-md font-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+                    Inventory
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-on-primary-container hover:bg-surface-container-high dark:hover:bg-on-primary-fixed-variant transition-colors rounded-sm text-body-md font-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+                    Analytics
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant dark:text-on-primary-container hover:bg-surface-container-high dark:hover:bg-on-primary-fixed-variant transition-colors rounded-sm text-body-md font-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                    Settings
+                </a>
+</li>
+</ul>
+<div class="mt-auto px-4">
+<button class="w-full bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-widest py-3 border border-primary hover:bg-surface hover:text-primary transition-colors">
+                New Specification
+            </button>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 ml-0 md:ml-64 p-margin-mobile md:p-margin-desktop bg-surface max-w-[1440px] w-full mx-auto flex flex-col gap-section-gap">
+<!-- Header Section -->
+<header class="flex justify-between items-end border-b border-outline-variant pb-8">
+<div>
+<p class="text-label-sm font-label-sm uppercase text-secondary tracking-widest mb-2">Welcome Back, Client 042</p>
+<h2 class="text-headline-lg font-headline-lg text-primary tracking-tighter">B2B Dashboard</h2>
+</div>
+<div class="hidden sm:flex gap-4">
+<button class="flex items-center gap-2 text-label-sm font-label-sm text-primary uppercase border border-outline-variant px-4 py-2 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined" data-icon="download" style="font-size: 16px;">download</span>
+                    Export Report
+                </button>
+</div>
+</header>
+<!-- Overview Cards (Bento Grid Style) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Upcoming Meeting -->
+<div class="border border-outline-variant bg-surface-container-lowest p-6 flex flex-col justify-between hover:bg-surface-container-low transition-colors min-h-[200px]">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-tertiary-fixed-dim/20 px-3 py-1 text-label-sm font-label-sm text-on-tertiary-container uppercase inline-block">Scheduled</div>
+<span class="material-symbols-outlined text-secondary" data-icon="event">event</span>
+</div>
+<div>
+<h3 class="text-headline-md font-headline-md text-primary mb-2">Q3 Supply Sync</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-4">Discussing structural weave specifications for Project Alpha.</p>
+<div class="flex items-center gap-2 text-data-num font-data-num text-secondary">
+<span class="material-symbols-outlined" data-icon="schedule" style="font-size: 14px;">schedule</span>
+                        Oct 12, 14:00 CET
+                    </div>
+</div>
+</div>
+<!-- Active Shipments -->
+<div class="border border-outline-variant bg-surface-container-lowest p-6 flex flex-col justify-between hover:bg-surface-container-low transition-colors min-h-[200px]">
+<div class="flex justify-between items-start mb-4">
+<div class="bg-primary px-3 py-1 text-label-sm font-label-sm text-on-primary uppercase inline-block">In Transit</div>
+<span class="material-symbols-outlined text-secondary" data-icon="local_shipping">local_shipping</span>
+</div>
+<div>
+<h3 class="text-headline-md font-headline-md text-primary mb-2">Order #TX-8902</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-4">Heavyweight Canvas - 500 rolls.</p>
+<div class="w-full bg-surface-container-high h-1 mt-4 relative">
+<div class="absolute top-0 left-0 h-full bg-primary w-[65%]"></div>
+</div>
+<div class="flex justify-between mt-2 text-label-sm font-label-sm text-secondary uppercase">
+<span>Shanghai</span>
+<span>Rotterdam (ETA 4d)</span>
+</div>
+</div>
+</div>
+<!-- Saved Products -->
+<div class="border border-outline-variant bg-surface-container-lowest p-6 flex flex-col justify-between hover:bg-surface-container-low transition-colors min-h-[200px]">
+<div class="flex justify-between items-start mb-4">
+<div class="border border-outline-variant px-3 py-1 text-label-sm font-label-sm text-primary uppercase inline-block">Watchlist</div>
+<span class="material-symbols-outlined text-secondary" data-icon="bookmark">bookmark</span>
+</div>
+<div>
+<h3 class="text-headline-md font-headline-md text-primary mb-2">4 Specifications</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-4">Awaiting final approval from technical team.</p>
+<a class="text-label-sm font-label-sm uppercase text-primary border-b border-primary pb-1 inline-flex items-center gap-1 hover:text-secondary transition-colors" href="#">
+                        Review Specs <span class="material-symbols-outlined" data-icon="arrow_forward" style="font-size: 14px;">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Business Journey Timeline -->
+<section class="border border-outline-variant bg-surface-container-lowest p-8 md:p-12">
+<h3 class="text-headline-md font-headline-md text-primary mb-8 border-b border-outline-variant pb-4">Order Journey: #TX-8902</h3>
+<div class="relative w-full py-8">
+<!-- Timeline Line -->
+<div class="absolute top-1/2 left-0 w-full h-[1px] bg-outline-variant -translate-y-1/2 hidden md:block"></div>
+<div class="absolute top-1/2 left-0 w-[45%] h-[2px] bg-primary -translate-y-1/2 hidden md:block z-10"></div>
+<div class="flex flex-col md:flex-row justify-between relative z-20 gap-8 md:gap-0">
+<!-- Step 1: Placed -->
+<div class="flex md:flex-col items-start md:items-center gap-4 md:gap-2">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center border-2 border-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="check" style="font-size: 16px;">check</span>
+</div>
+<div class="md:text-center pt-1 md:pt-4">
+<h4 class="text-label-sm font-label-sm uppercase text-primary">Spec Confirmed</h4>
+<p class="text-data-num font-data-num text-secondary mt-1">Oct 01</p>
+</div>
+</div>
+<!-- Step 2: Production -->
+<div class="flex md:flex-col items-start md:items-center gap-4 md:gap-2">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center border-2 border-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="precision_manufacturing" style="font-size: 16px;">precision_manufacturing</span>
+</div>
+<div class="md:text-center pt-1 md:pt-4">
+<h4 class="text-label-sm font-label-sm uppercase text-primary">Production</h4>
+<p class="text-data-num font-data-num text-secondary mt-1">Oct 03 - Oct 08</p>
+</div>
+</div>
+<!-- Step 3: Transit (Current) -->
+<div class="flex md:flex-col items-start md:items-center gap-4 md:gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center border-2 border-primary shrink-0 relative">
+<div class="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+</div>
+<div class="md:text-center pt-1 md:pt-4">
+<h4 class="text-label-sm font-label-sm uppercase text-primary font-bold">In Transit</h4>
+<p class="text-data-num font-data-num text-primary mt-1">Current State</p>
+</div>
+</div>
+<!-- Step 4: Delivered -->
+<div class="flex md:flex-col items-start md:items-center gap-4 md:gap-2 opacity-50">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center border-2 border-outline-variant shrink-0">
+<span class="material-symbols-outlined text-outline-variant" data-icon="inventory" style="font-size: 16px;">inventory</span>
+</div>
+<div class="md:text-center pt-1 md:pt-4">
+<h4 class="text-label-sm font-label-sm uppercase text-secondary">Delivery</h4>
+<p class="text-data-num font-data-num text-secondary mt-1">Est. Oct 16</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recently Viewed Textiles -->
+<section>
+<div class="flex justify-between items-center mb-8 border-b border-outline-variant pb-4">
+<h3 class="text-headline-md font-headline-md text-primary">Recently Evaluated Specifications</h3>
+<a class="text-label-sm font-label-sm uppercase text-primary hover:text-secondary transition-colors" href="#">View Catalogue</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Textile Card 1 -->
+<div class="group border border-outline-variant bg-surface-container-lowest hover:border-primary transition-colors cursor-pointer flex flex-col">
+<div class="h-48 w-full bg-surface-container-highest relative overflow-hidden" data-alt="Close-up macro photography of a dense, industrial-grade charcoal gray canvas textile. The lighting is harsh and directional, highlighting the heavy structural weave and rugged texture of the fabric. The composition is highly detailed, emphasizing durability and material quality for a premium B2B manufacturing context." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBqqCJChH2t1ee40JILN52RqD8O1V4jX1WJBizq4A9YyblfcgdIisuPOWYciVUwmACKOB3rA9fpDvFv0Tm9X-JEMCns_jMqXnYRZrehhYbwPJosvfsY9Y1EVISmpbTjU0UlyGkSR9qI5UukttHm4K3MfUz7kltFo77fc9ecLepJb4urHlob87W9WXSTPb4PChnhUKRaQgyARuUPJyCSdWMW_WmKh-Kn0GluEYMuV5d8nMPLa53tmmIl')">
+<!-- Image placeholder logic handled via background-image -->
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-body-md font-body-md font-semibold text-primary">Carbon Twill 400</h4>
+<span class="text-label-sm font-label-sm text-secondary bg-surface-container-high px-2 py-1">SKU-A1</span>
+</div>
+<p class="text-data-num font-data-num text-secondary mb-4 flex-1">400gsm / Heavy Duty</p>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant">
+<span class="text-label-sm font-label-sm uppercase text-on-tertiary-container bg-tertiary-fixed-dim/20 px-2 py-1">In Stock</span>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Textile Card 2 -->
+<div class="group border border-outline-variant bg-surface-container-lowest hover:border-primary transition-colors cursor-pointer flex flex-col">
+<div class="h-48 w-full bg-surface-container-highest relative overflow-hidden" data-alt="High-resolution flat lay photograph of a pristine, off-white technical synthetic fabric. The material features a subtle geometric ripstop grid pattern. The lighting is bright and diffuse, creating a sterile, laboratory-like light-mode aesthetic that emphasizes purity and advanced material science." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA3tbUdJNVebA_5tQOI10MIs2rQ_2LfD20QEpKxZczEome1KWc30eAr1rjWZ2s2vLRANjeReAcA1gzLjYNUciMj04-mx8iRdooEbcloHfTwAkbnPLRjSi1TCrO-pf_PZw_E-b5SjZnxL3s8RQNUPId1T_S3ZDM19orngvs9--Dq4Pq8rJ8-XxQu66-wou9lFSHFqk0ayvSqvaUd7BUKnD0JeQTm9n3XQSRIz43flB2t7X8LkdvGv8hh')">
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-body-md font-body-md font-semibold text-primary">AeroGrid Ripstop</h4>
+<span class="text-label-sm font-label-sm text-secondary bg-surface-container-high px-2 py-1">SKU-B2</span>
+</div>
+<p class="text-data-num font-data-num text-secondary mb-4 flex-1">120gsm / Water Repellent</p>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant">
+<span class="text-label-sm font-label-sm uppercase text-secondary border border-outline-variant px-2 py-1">Lead Time: 2w</span>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Textile Card 3 -->
+<div class="group border border-outline-variant bg-surface-container-lowest hover:border-primary transition-colors cursor-pointer flex flex-col">
+<div class="h-48 w-full bg-surface-container-highest relative overflow-hidden" data-alt="Detailed macro shot of an organic cotton blend fabric in a soft, muted sage green color. The weave is slightly loose and breathable, suggesting natural origins. The lighting is soft and natural, casting delicate shadows across the fibers, emphasizing sustainability and eco-friendly manufacturing practices in a modern industrial setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBnKYMV3Z2nPTdlM4nkcOh-jLd9jFdTLrIeL0ccqiySFy3nakXMFaP2wURNnV2EkxWBEnU-b0qPBveOy4LJLxu4zb2C7DmtR-RGJ-fIx0J7fjTIOcWAxJUchvU87dgPsTxTZEaMUNiPqo5EhQvsiIY6pqiu1y4sUwHcV1N2f0_BMjvhiqOq0n0hNRXhFORyh4SwhIVpPe3y6faVarEnORMMz7tCc9tuWmswCBJby31ynkjI5iiFO_Af')">
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-body-md font-body-md font-semibold text-primary">EcoWeave Sage</h4>
+<span class="text-label-sm font-label-sm text-secondary bg-surface-container-high px-2 py-1">SKU-C3</span>
+</div>
+<p class="text-data-num font-data-num text-secondary mb-4 flex-1">220gsm / Organic Blend</p>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant">
+<span class="text-label-sm font-label-sm uppercase text-on-tertiary-container bg-tertiary-fixed-dim/20 px-2 py-1">Certified</span>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Textile Card 4 -->
+<div class="group border border-outline-variant bg-surface-container-lowest hover:border-primary transition-colors cursor-pointer flex flex-col hidden lg:flex">
+<div class="h-48 w-full bg-surface-container-highest relative overflow-hidden" data-alt="Close-up of a high-performance aramid fiber fabric in a deep, stark black. The material has a distinct, tight diagonal twill weave indicating extreme tensile strength and heat resistance. The lighting is cool and clinical, creating subtle specular highlights on the synthetic threads, showcasing premium industrial grade precision." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAdH1XeceX6Dy-XYObcgX2l4KGJ9uqHBajyvhgV8LHA-E5lgAaBEdfYS83q3K-jFlmsZygXZuCfxXQqDQwWSMYzsQaSzXrAmzc45aZqCjYrE1Osyb8sqDXURbf05EudfwBi0f3sLkexWfmqWXp7fCxS51FBTw-yHOxlmfg2renJ6DbIE_ZHwbrpo_Gjzwftwo5Qe9DUtCaPgXbYq-LY-7o59pO1a7jXMQclSpadnuf3hzT0to1ATgJQ')">
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-body-md font-body-md font-semibold text-primary">K-Shield Armor</h4>
+<span class="text-label-sm font-label-sm text-secondary bg-surface-container-high px-2 py-1">SKU-D4</span>
+</div>
+<p class="text-data-num font-data-num text-secondary mb-4 flex-1">800gsm / High Tensile</p>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant">
+<span class="text-label-sm font-label-sm uppercase text-secondary border border-outline-variant px-2 py-1">Custom Order</span>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-surface/90 backdrop-blur-md border-t border-outline-variant z-50 px-4 py-3 flex justify-between items-center shadow-[0_-4px_24px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center text-primary" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="dashboard">dashboard</span>
+<span class="text-[10px] uppercase font-label-sm font-bold">Dashboard</span>
+</a>
+<a class="flex flex-col items-center text-secondary hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="package_2">package_2</span>
+<span class="text-[10px] uppercase font-label-sm">Orders</span>
+</a>
+<a class="flex flex-col items-center text-secondary hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="inventory_2">inventory_2</span>
+<span class="text-[10px] uppercase font-label-sm">Inventory</span>
+</a>
+<a class="flex flex-col items-center text-secondary hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="more_horiz">more_horiz</span>
+<span class="text-[10px] uppercase font-label-sm">More</span>
+</a>
+</nav>
+</body></html>
